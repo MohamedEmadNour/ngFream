@@ -1,0 +1,9 @@
+.content-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+  }
+  
+  #rout {
+    flex-grow: 1;
+  }

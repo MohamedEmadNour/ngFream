@@ -1,0 +1,61 @@
+.line{
+    width: 40px;
+    height: 5px;
+}
+p{
+    font-size: larger;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  
+  .form-group {
+    position: relative;
+    margin-bottom: 20%;
+  }
+  
+  input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  label.placeholder {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: top 0.2s ease, font-size 0.2s ease;
+    font-size: 1rem;
+    background-color: white !important;
+  }
+  
+  input:focus + label.placeholder,
+  input:not(:placeholder-shown) + label.placeholder {
+    top: -35%;
+    background-color: none !important;
+    font-size: 1rem;
+    font-weight: bold;
+    color: black;
+
+
+  }
+  
+  button {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  

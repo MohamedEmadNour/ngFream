@@ -1,0 +1,20 @@
+#Connav {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between !important;
+}
+#navbarTogglerDemo03 {
+    flex-grow: unset;
+}
+#Connav a {
+    color: white;
+    font-weight: bolder;
+}
+#Connav ul a {
+    font-size: larger;
+}
+nav {
+    z-index: 9999999999999;
+
+}

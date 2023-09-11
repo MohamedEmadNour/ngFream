@@ -1,0 +1,41 @@
+<ng-template #imageModalTemplate >
+    <div class="Viweing">
+      <div class="modal-header ">
+        <h4 class="modal-title">Image Preview</h4>
+        <button type="button" class="close" (click)="bsModalRef.hide()">
+          <span>&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img [src]="selectedImageUrl" class="img-fluid" alt="Image">
+      </div>
+    </div>
+</ng-template>
+<section class="container-fluid bg-body-secondary">
+    <div class="container p-5 d-flex flex-column justify-content-center align-items-center">
+            <div class="text-center mt-3" >
+                <h2 class="fw-bolder">PORTFOLIO COMPONENT</h2>
+            </div>
+            <div class="mt-2">
+                <div class="d-flex align-items-center justify-content-center mb-3">
+                    <div  class="line me-3" style="background-color: rgb(0, 0, 0);"></div>
+                        <i  class="fa fa-star fa-1x"></i>
+                    <div  class="line ms-3" style="background-color: rgb(0, 0, 0);"></div>
+                </div>
+            </div>
+            <div class="">
+                <div class="row g-4">
+                    <div *ngFor="let num of imgNum; let i = index" class="col-md-4">
+                      <div class="work-box">
+                        <div class="rounded-3 overflow-hidden position-relative" (click)="openImageModal(imageModalTemplate, 'assets/images/port' + num + '.png')">
+                          <img alt="Port{{num}}" class="w-100 rounded-3" src="assets/images/port{{num}}.png">
+                          <div class="layer position-absolute start-0 w-100 top-0 h-100 d-flex justify-content-center align-items-center">
+                            <i class="text-white fa fa-plus fa-5x"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+    </div>
+</section>
